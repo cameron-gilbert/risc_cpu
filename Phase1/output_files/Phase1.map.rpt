@@ -1,0 +1,626 @@
+Analysis & Synthesis report for Phase1
+Mon Feb 24 12:25:06 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: alu:alu
+ 10. Port Connectivity Checks: "alu:alu|rol:rol_op"
+ 11. Port Connectivity Checks: "alu:alu|ror:ror_op"
+ 12. Port Connectivity Checks: "alu:alu|sub:sub_op"
+ 13. Port Connectivity Checks: "alu:alu|add:add_op"
+ 14. Port Connectivity Checks: "reg_32_bit:mar"
+ 15. Port Connectivity Checks: "reg_32_bit:ir"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Feb 24 12:25:06 2025       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; Phase1                                      ;
+; Top-level Entity Name           ; Datapath                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 67                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; Datapath           ; Phase1             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; registers.v                      ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/registers.v       ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v        ;         ;
+; and_32_bit.v                     ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v      ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/alu.v             ;         ;
+; add.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/add.v             ;         ;
+; mdr_mux_2_to_1.v                 ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v  ;         ;
+; logical_or.v                     ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v      ;         ;
+; bus_mux_32_to_1.v                ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v ;         ;
+; sub.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/sub.v             ;         ;
+; mul.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/mul.v             ;         ;
+; div.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/div.v             ;         ;
+; shr.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shr.v             ;         ;
+; neg.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/neg.v             ;         ;
+; not.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/not.v             ;         ;
+; shra.v                           ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shra.v            ;         ;
+; shl.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shl.v             ;         ;
+; rol.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/rol.v             ;         ;
+; ror.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/ror.v             ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 0      ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 0      ;
+;     -- 7 input functions                    ; 0      ;
+;     -- 6 input functions                    ; 0      ;
+;     -- 5 input functions                    ; 0      ;
+;     -- 4 input functions                    ; 0      ;
+;     -- <=3 input functions                  ; 0      ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 67     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; pc_out ;
+; Maximum fan-out                             ; 1      ;
+; Total fan-out                               ; 67     ;
+; Average fan-out                             ; 0.50   ;
++---------------------------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |Datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |Datapath           ; Datapath    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:alu ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; ld_opcode      ; 00000 ; Unsigned Binary             ;
+; ldi_opcode     ; 00001 ; Unsigned Binary             ;
+; st_opcode      ; 00010 ; Unsigned Binary             ;
+; add_opcode     ; 00011 ; Unsigned Binary             ;
+; sub_opcode     ; 00100 ; Unsigned Binary             ;
+; and_opcode     ; 00101 ; Unsigned Binary             ;
+; or_opcode      ; 00110 ; Unsigned Binary             ;
+; ror_opcode     ; 00111 ; Unsigned Binary             ;
+; rol_opcode     ; 01000 ; Unsigned Binary             ;
+; shr_opcode     ; 01001 ; Unsigned Binary             ;
+; shra_opcode    ; 01010 ; Unsigned Binary             ;
+; shl_opcode     ; 01011 ; Unsigned Binary             ;
+; addi_opcode    ; 01100 ; Unsigned Binary             ;
+; andi_opcode    ; 01101 ; Unsigned Binary             ;
+; ori_opcode     ; 01110 ; Unsigned Binary             ;
+; div_opcode     ; 01111 ; Unsigned Binary             ;
+; mul_opcode     ; 10000 ; Unsigned Binary             ;
+; neg_opcode     ; 10001 ; Unsigned Binary             ;
+; not_opcode     ; 10010 ; Unsigned Binary             ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|rol:rol_op"                                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|ror:ror_op"                                                                                                                                                               ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; b    ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (5 bits) it drives.  The 27 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|sub:sub_op"                                                                                                                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cin     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; cin[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:alu|add:add_op"                                                                                                                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cin     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; cin[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; cout    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_32_bit:mar"                                                                                                        ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[31..1]" have no fanouts ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_32_bit:ir"                                                                                                         ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[31..1]" have no fanouts ;
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 67                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Feb 24 12:24:57 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file registers.v
+    Info (12023): Found entity 1: reg_32_bit File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v Line: 1
+    Info (12023): Found entity 2: pc_reg File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: Datapath File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
+    Info (12023): Found entity 1: and_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/and_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file and_32_bit.v
+    Info (12023): Found entity 1: and_32_bit File: C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file add.v
+    Info (12023): Found entity 1: add File: C:/Users/cam/Downloads/374realfinal/Phase1/add.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file add_tb.v
+    Info (12023): Found entity 1: add_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/add_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mdr_mux_2_to_1.v
+    Info (12023): Found entity 1: mdr_mux_2_to_1 File: C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file logical_or.v
+    Info (12023): Found entity 1: logical_or File: C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_tb.v
+    Info (12023): Found entity 1: or_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/or_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file bus_mux_32_to_1.v
+    Info (12023): Found entity 1: bus_mux_32_to_1 File: C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sub.v
+    Info (12023): Found entity 1: sub File: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sub_tb.v
+    Info (12023): Found entity 1: sub_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/sub_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mul.v
+    Info (12023): Found entity 1: mul File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mul_tb.v
+    Info (12023): Found entity 1: mul_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/mul_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file div.v
+    Info (12023): Found entity 1: div File: C:/Users/cam/Downloads/374realfinal/Phase1/div.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file div_tb.v
+    Info (12023): Found entity 1: div_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/div_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shr.v
+    Info (12023): Found entity 1: shr File: C:/Users/cam/Downloads/374realfinal/Phase1/shr.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shr_tb.v
+    Info (12023): Found entity 1: shr_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shr_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file neg.v
+    Info (12023): Found entity 1: logical_neg File: C:/Users/cam/Downloads/374realfinal/Phase1/neg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file not.v
+    Info (12023): Found entity 1: logical_not File: C:/Users/cam/Downloads/374realfinal/Phase1/not.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file neg_tb.v
+    Info (12023): Found entity 1: neg_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/neg_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shra.v
+    Info (12023): Found entity 1: shra File: C:/Users/cam/Downloads/374realfinal/Phase1/shra.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shl.v
+    Info (12023): Found entity 1: shl File: C:/Users/cam/Downloads/374realfinal/Phase1/shl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rol.v
+    Info (12023): Found entity 1: rol File: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ror.v
+    Info (12023): Found entity 1: ror File: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file not_tb.v
+    Info (12023): Found entity 1: not_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shra_tb.v
+    Info (12023): Found entity 1: shra_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shra_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file shl_tb.v
+    Info (12023): Found entity 1: shl_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shl_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ror_tb.v
+    Info (12023): Found entity 1: ror_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/ror_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file rol_tb.v
+    Info (12023): Found entity 1: rol_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/rol_tb.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(86): created implicit net for "r1_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 86
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(93): created implicit net for "r8_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 93
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(94): created implicit net for "r9_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 94
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(95): created implicit net for "r10_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 95
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(96): created implicit net for "r11_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 96
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(97): created implicit net for "r12_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 97
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(98): created implicit net for "r13_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 98
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(99): created implicit net for "r14_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 99
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(100): created implicit net for "r15_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 100
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(107): created implicit net for "ir_data" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 107
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(108): created implicit net for "mar_data" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 108
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(136): created implicit net for "r1_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 136
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r8_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r9_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r10_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r11_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r12_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r13_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r14_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r15_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(140): created implicit net for "hi_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(140): created implicit net for "lo_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 140
+Warning (10236): Verilog HDL Implicit Net warning at alu.v(29): created implicit net for "cout" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 29
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Info (12128): Elaborating entity "reg_32_bit" for hierarchy "reg_32_bit:r0" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 85
+Info (12128): Elaborating entity "pc_reg" for hierarchy "pc_reg:pc" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 110
+Info (12128): Elaborating entity "mdr_mux_2_to_1" for hierarchy "mdr_mux_2_to_1:mdr_mux" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 119
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 130
+Warning (10270): Verilog HDL Case Statement warning at alu.v(63): incomplete case statement has no default case item File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at alu.v(63): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[0]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[1]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[2]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[3]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[4]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[5]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[6]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[7]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[8]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[9]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[10]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[11]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[12]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[13]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[14]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[15]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[16]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[17]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[18]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[19]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[20]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[21]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[22]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[23]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[24]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[25]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[26]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[27]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[28]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[29]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[30]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[31]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[32]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[33]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[34]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[35]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[36]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[37]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[38]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[39]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[40]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[41]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[42]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[43]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[44]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[45]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[46]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[47]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[48]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[49]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[50]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[51]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[52]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[53]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[54]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[55]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[56]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[57]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[58]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[59]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[60]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[61]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[62]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (10041): Inferred latch for "c[63]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
+Info (12128): Elaborating entity "and_32_bit" for hierarchy "alu:alu|and_32_bit:and_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 26
+Info (12128): Elaborating entity "logical_or" for hierarchy "alu:alu|logical_or:or_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 27
+Info (12128): Elaborating entity "add" for hierarchy "alu:alu|add:add_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 28
+Info (12128): Elaborating entity "sub" for hierarchy "alu:alu|sub:sub_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 29
+Info (12128): Elaborating entity "mul" for hierarchy "alu:alu|mul:mul_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 30
+Warning (10199): Verilog HDL Case Statement warning at mul.v(20): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 20
+Warning (10199): Verilog HDL Case Statement warning at mul.v(21): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 21
+Warning (10199): Verilog HDL Case Statement warning at mul.v(23): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 23
+Info (12128): Elaborating entity "div" for hierarchy "alu:alu|div:div_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 31
+Info (12128): Elaborating entity "shr" for hierarchy "alu:alu|shr:shr_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 32
+Info (12128): Elaborating entity "shra" for hierarchy "alu:alu|shra:shra_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 33
+Info (12128): Elaborating entity "shl" for hierarchy "alu:alu|shl:shl_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 34
+Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 35
+Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 36
+Info (12128): Elaborating entity "logical_neg" for hierarchy "alu:alu|logical_neg:neg_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 37
+Info (12128): Elaborating entity "logical_not" for hierarchy "alu:alu|logical_not:not_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 38
+Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:bus_mux" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 150
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 67 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pc_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 2
+    Warning (15610): No output dependent on input pin "zlo_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 3
+    Warning (15610): No output dependent on input pin "zhi_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 4
+    Warning (15610): No output dependent on input pin "mdr_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 5
+    Warning (15610): No output dependent on input pin "r0_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 6
+    Warning (15610): No output dependent on input pin "r2_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "r3_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 8
+    Warning (15610): No output dependent on input pin "r4_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 9
+    Warning (15610): No output dependent on input pin "r5_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 10
+    Warning (15610): No output dependent on input pin "r6_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 11
+    Warning (15610): No output dependent on input pin "r7_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 12
+    Warning (15610): No output dependent on input pin "mar_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 13
+    Warning (15610): No output dependent on input pin "z_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 14
+    Warning (15610): No output dependent on input pin "lo_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 15
+    Warning (15610): No output dependent on input pin "hi_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 16
+    Warning (15610): No output dependent on input pin "pc_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 17
+    Warning (15610): No output dependent on input pin "mdr_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 18
+    Warning (15610): No output dependent on input pin "ir_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 19
+    Warning (15610): No output dependent on input pin "y_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 20
+    Warning (15610): No output dependent on input pin "pc_increment" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 21
+    Warning (15610): No output dependent on input pin "read" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 22
+    Warning (15610): No output dependent on input pin "op_code[0]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "op_code[1]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "op_code[2]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "op_code[3]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "op_code[4]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
+    Warning (15610): No output dependent on input pin "r0_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 24
+    Warning (15610): No output dependent on input pin "r2_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 25
+    Warning (15610): No output dependent on input pin "r3_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 26
+    Warning (15610): No output dependent on input pin "r4_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 27
+    Warning (15610): No output dependent on input pin "r5_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 28
+    Warning (15610): No output dependent on input pin "r6_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 29
+    Warning (15610): No output dependent on input pin "r7_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 30
+    Warning (15610): No output dependent on input pin "clr" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 31
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 32
+    Warning (15610): No output dependent on input pin "m_data_in[0]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[1]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[2]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[3]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[4]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[5]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[6]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[7]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[8]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[9]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[10]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[11]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[12]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[13]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[14]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[15]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[16]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[17]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[18]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[19]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[20]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[21]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[22]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[23]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[24]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[25]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[26]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[27]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[28]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[29]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[30]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+    Warning (15610): No output dependent on input pin "m_data_in[31]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
+Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Mon Feb 24 12:25:06 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
+
+
