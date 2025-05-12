@@ -1,16 +1,16 @@
-Fitter Status : Successful - Mon Feb 24 12:25:19 2025
+Fitter Status : Successful - Thu Apr 03 20:27:53 2025
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Phase1
 Top-level Entity Name : Datapath
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 18,480 ( < 1 % )
-Total registers : 0
-Total pins : 67 / 224 ( 30 % )
+Logic utilization (in ALMs) : 2,438 / 18,480 ( 13 % )
+Total registers : 810
+Total pins : 97 / 224 ( 43 % )
 Total virtual pins : 0
-Total block memory bits : 0 / 3,153,920 ( 0 % )
-Total RAM Blocks : 0 / 308 ( 0 % )
+Total block memory bits : 16,384 / 3,153,920 ( < 1 % )
+Total RAM Blocks : 2 / 308 ( < 1 % )
 Total DSP Blocks : 0 / 66 ( 0 % )
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

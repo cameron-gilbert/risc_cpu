@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at control_unit.v(267): always construct contains both blocking and non-blocking assignments File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase4/Phase4/control_unit.v Line: 267

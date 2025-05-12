@@ -57,6 +57,7 @@ parameter div_opcode= 5'b01111;
 parameter mul_opcode = 5'b10000; 
 parameter neg_opcode = 5'b10001; 
 parameter not_opcode = 5'b10010;
+parameter br_opcode = 5'b10011;
 
 // Select the internal result based on the opcode
 always @(*) begin
@@ -66,7 +67,42 @@ always @(*) begin
 			c[31:0] = and_result;
 			c[63:32] = 32'b0;
 		end
-
+		
+		ld_opcode: begin
+			c[31:0] = add_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		ldi_opcode: begin
+			c[31:0] = add_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		st_opcode: begin
+			c[31:0] = add_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		br_opcode: begin
+			c[31:0] = add_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		addi_opcode: begin
+			c[31:0] = add_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		andi_opcode: begin
+			c[31:0] = and_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
+		ori_opcode: begin
+			c[31:0] = or_result[31:0];
+			c[63:32] = 32'b0;
+		end
+		
 		or_opcode: begin
 			c[31:0] = or_result;
 			c[63:32] = 32'b0;

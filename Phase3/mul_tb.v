@@ -1,0 +1,235 @@
+`timescale 1ns/10ps
+
+module mul_tb; 	//enable indicate register will take in data from bus
+reg pc_out; 
+reg zlo_out; 		
+reg zhi_out;		
+reg mdr_out; 	
+reg mar_enable; 
+reg z_enable;	
+reg lo_enable;
+reg hi_enable;	
+reg pc_enable; 
+reg mdr_enable; 
+reg read;
+reg ir_enable; 
+reg y_enable;
+reg pc_increment; 
+reg r2_enable;
+reg r3_enable;
+reg r4_enable;
+reg r6_enable;
+reg r7_enable;
+reg r2_out;
+reg r3_out;
+reg r4_out;
+reg r6_out;
+reg r7_out;
+reg clk; 
+reg clr;
+reg [4:0] op_code; 
+reg [31:0] m_data_in;
+
+
+// FSM signals
+parameter Default = 4'b0000; 
+parameter reg_load1a = 4'b0001; 
+parameter reg_load1b = 4'b0010; 
+parameter reg_load2a = 4'b0011; 
+parameter reg_load2b = 4'b0100; 
+parameter T0 = 4'b0101; 
+parameter T1 = 4'b0110; 
+parameter T2 = 4'b0111; 
+parameter T3 = 4'b1000; 
+parameter T4 = 4'b1001; 
+parameter T5 = 4'b1010; 
+parameter T6 = 4'b1011; 
+
+
+reg	[3:0] present_state = Default;
+
+// Opcodes for operations
+parameter ld_opcode = 5'b00000; 
+parameter ldi_opcode = 5'b00001; 
+parameter st_opcode = 5'b00010; 
+parameter add_opcode = 5'b00011; 
+parameter sub_opcode = 5'b00100; 
+parameter and_opcode  = 5'b00101; 
+parameter or_opcode  = 5'b00110; 
+parameter ror_opcode = 5'b00111; 
+parameter rol_opcode = 5'b01000; 
+parameter shr_opcode = 5'b01001; 
+parameter shra_opcode = 5'b01010;
+parameter shl_opcode  = 5'b01011; 
+parameter addi_opcode = 5'b01100; 
+parameter andi_opcode = 5'b01101; 
+parameter ori_opcode = 5'b01110; 
+parameter div_opcode= 5'b01111; 
+parameter mul_opcode = 5'b10000; 
+parameter neg_opcode = 5'b10001; 
+parameter not_opcode = 5'b10010;
+
+// Instantiate the DUT
+Datapath DUT(
+	 .pc_out(pc_out),
+    .zlo_out(zlo_out),
+    .zhi_out(zhi_out),
+    .mdr_out(mdr_out), 
+	 .r2_out(r2_out),
+    .r3_out(r3_out),
+	 .r4_out(r4_out),
+	 .r6_out(r6_out),
+    .r7_out(r7_out), 
+    .mar_enable(mar_enable), 
+    .z_enable(z_enable), 
+	 .lo_enable(lo_enable),
+	 .hi_enable(hi_enable),
+    .pc_enable(pc_enable), 
+    .mdr_enable(mdr_enable), 
+    .ir_enable(ir_enable), 
+    .y_enable(y_enable), 
+    .pc_increment(pc_increment), 
+    .read(read), 
+    .op_code(op_code), // same as the AND
+	 .r2_enable(r2_enable),
+    .r3_enable(r3_enable),
+    .r4_enable(r4_enable),
+	 .r6_enable(r6_enable),
+    .r7_enable(r7_enable),
+    .clr(clr), 
+    .clk(clk),
+    .m_data_in(m_data_in)
+);
+
+// Initialize the clock signals
+initial 
+	begin
+		clr = 0;
+		clk = 0; //reset clock
+		forever #10 clk = ~ clk; //to create square wave
+end
+
+// FSM changes on positive edge of clock every two clock cycles, due to length needed by state T0
+reg toggle = 0;
+
+// Toggle the counter on every clock cycle
+always @(posedge clk)
+begin
+    toggle <= ~toggle;
+end
+
+always @(posedge clk)
+begin
+	if (toggle == 1) 
+	begin
+			case (present_state)
+				Default     : present_state = reg_load1a;
+				reg_load1a  : present_state = reg_load1b;
+				reg_load1b  : present_state = reg_load2a;
+				reg_load2a  : present_state = reg_load2b;
+				reg_load2b  : present_state = T0;
+				T0          : present_state = T1;
+				T1          : present_state = T2;
+				T2          : present_state = T3;
+				T3          : present_state = T4;
+				T4          : present_state = T5;
+				T5				: present_state = T6;
+		endcase
+	end
+end
+
+always @(present_state)
+begin
+	case (present_state)
+		// present_state: 0
+		// Set all signals to 0
+		Default: begin	
+			pc_out <= 0; zlo_out <= 0; zhi_out <= 0; mdr_out <= 0; r2_out <= 0; r4_out <= 0;
+			r6_out <= 0; pc_enable <= 0; mdr_enable <= 0; mar_enable <= 0; 
+			ir_enable <= 0; y_enable <= 0; pc_increment <= 0;   
+			read <= 0; op_code <= 0; z_enable <= 0; lo_enable <= 0; hi_enable <= 0; 
+			r2_enable <= 0; r4_enable <= 0; r6_enable <= 0; 
+			m_data_in <= 32'h00000000;
+		end
+		
+		// present_state: 1
+		// Load 0x00000022 into MDR
+		reg_load1a: begin
+			m_data_in <= 32'h00000022;  //simulating loading value from memory
+			read <= 1; mdr_enable <= 1;	//done by setting read = 1 so that mux usues 
+			#20 read <= 0; mdr_enable <= 0; //mem along with setting enable for mdr to take in data
+		end
+
+		// present_state: 2
+		// Load MDR into R2
+		reg_load1b: begin
+			mdr_out <= 1; r2_enable <= 1;		
+			#20 mdr_out <= 0; r2_enable <= 0;
+		end
+
+		// present_state: 3
+		// Load 0x00000024 into MDR
+		reg_load2a: begin
+			m_data_in <= 32'h00000024;
+			read <= 1; mdr_enable <= 1;
+			#20 read <= 0; mdr_enable <= 0;
+		end
+		
+		// present_state: 4
+		// Load MDR into R6
+		reg_load2b: begin	
+			mdr_out <= 1; r6_enable <= 1;
+			#20 mdr_out <= 0; r6_enable <= 0;
+		end
+	
+		// present_state: 7
+		// Load PC into MAR and increment PC. Load incremented PC into Z.
+		T0: begin
+			pc_out <= 1; mar_enable <= 1; pc_increment <= 1; 
+			#20 mar_enable <= 0; pc_increment <= 0; r4_enable <= 1; //caused problems as needs two cycles 
+			#20 pc_out <= 0; r4_enable <= 0;
+		end
+
+		// present_state: 8
+		// Load "mul R2, R6" into MDR, Load ZLO back into PC
+		T1: begin
+			m_data_in <= 32'h81300000; //this is the opcode for the and statement above this holds info on 
+			read <= 1; mdr_enable <= 1; pc_enable <= 1; r4_out <= 1; //which reg will be used, but
+			#20 read <= 0; mdr_enable <= 0; pc_enable <= 0; r4_out <= 0; // functionality is simulated here
+		end
+
+		// present_state: 9
+		// Load MDR into IR
+		T2: begin //get the loaded opcode into IR
+			mdr_out <= 1; ir_enable <= 1; 
+			#20 mdr_out<= 0; ir_enable <= 0; 
+		end
+
+		// present_state: a
+		// Load R2 into Y
+		T3: begin	// get r3 value into y
+			r2_out <= 1; y_enable <= 1;
+			#20 r2_out<= 0; y_enable <= 0;  
+		end
+
+		// present_state: b
+		// Put R7 into alu and put opcode into ALU. Store ALU restults in ZLO
+		T4: begin
+			r6_out<= 1; op_code <= mul_opcode; z_enable <= 1;  //use y along wih r7 reg to do the operation and put into z
+			#20 r6_out<= 0; z_enable <= 0;
+		end
+
+		// present_state: c
+		// Store ZLO into R4
+		T5: begin	
+			zlo_out<= 1; lo_enable <= 1;   //take out of zlo and put into r4
+			#20 zlo_out<= 0; lo_enable <= 0;
+		end
+		T6: begin	
+			zhi_out<= 1; hi_enable <= 1;   //take out of zlo and put into r4
+			#20 zhi_out<= 0; hi_enable <= 0;
+		end
+	endcase
+end
+endmodule
+

@@ -2,7 +2,388 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "con_out",
+					"strict" : false
+				},
+				{
+					"name" : "con_enable",
+					"strict" : false
+				},
+				{
+					"name" : "ba_out",
+					"strict" : false
+				},
+				{
+					"name" : "r_out",
+					"strict" : false
+				},
+				{
+					"name" : "gra",
+					"strict" : false
+				},
+				{
+					"name" : "grb",
+					"strict" : false
+				},
+				{
+					"name" : "grc",
+					"strict" : false
+				},
+				{
+					"name" : "hi_out",
+					"strict" : false
+				},
+				{
+					"name" : "lo_out",
+					"strict" : false
+				},
+				{
+					"name" : "mdr_out",
+					"strict" : false
+				},
+				{
+					"name" : "c_sign_extended_out",
+					"strict" : false
+				},
+				{
+					"name" : "pc_out",
+					"strict" : false
+				},
+				{
+					"name" : "inport_out",
+					"strict" : false
+				},
+				{
+					"name" : "zhi_out",
+					"strict" : false
+				},
+				{
+					"name" : "zlo_out",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clr",
+					"strict" : false
+				},
+				{
+					"name" : "ir_enable",
+					"strict" : false
+				},
+				{
+					"name" : "r_in",
+					"strict" : false
+				},
+				{
+					"name" : "r8_enable",
+					"strict" : false
+				},
+				{
+					"name" : "hi_enable",
+					"strict" : false
+				},
+				{
+					"name" : "lo_enable",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[31]",
+					"strict" : false
+				},
+				{
+					"name" : "read",
+					"strict" : false
+				},
+				{
+					"name" : "mdr_enable",
+					"strict" : false
+				},
+				{
+					"name" : "pc_increment",
+					"strict" : false
+				},
+				{
+					"name" : "pc_enable",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[31]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init_enable",
+					"strict" : false
+				},
+				{
+					"name" : "z_enable",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[24]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[24]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[23]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[23]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[20]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[20]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[19]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[19]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[16]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[15]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[25]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[25]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[28]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[28]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[27]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[27]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[30]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[30]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[26]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[26]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[22]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[22]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[29]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[29]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[21]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[21]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[18]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[18]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[17]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[17]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inport_init[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc_init[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ram_write",
+					"strict" : false
+				},
+				{
+					"name" : "mar_enable",
+					"strict" : false
+				},
+				{
+					"name" : "y_enable",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

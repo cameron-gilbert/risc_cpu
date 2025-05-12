@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Phase1
-Mon Feb 24 12:25:06 2025
+Thu Apr 03 20:26:03 2025
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,17 +13,25 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: alu:alu
- 10. Port Connectivity Checks: "alu:alu|rol:rol_op"
- 11. Port Connectivity Checks: "alu:alu|ror:ror_op"
- 12. Port Connectivity Checks: "alu:alu|sub:sub_op"
- 13. Port Connectivity Checks: "alu:alu|add:add_op"
- 14. Port Connectivity Checks: "reg_32_bit:mar"
- 15. Port Connectivity Checks: "reg_32_bit:ir"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for ram:ram_memory|altsyncram:memory_rtl_0|altsyncram_h2r1:auto_generated
+ 14. Parameter Settings for User Entity Instance: alu:alu
+ 15. Parameter Settings for Inferred Entity Instance: ram:ram_memory|altsyncram:memory_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "outport:outport"
+ 18. Port Connectivity Checks: "ram:ram_memory"
+ 19. Port Connectivity Checks: "alu:alu|rol:rol_op"
+ 20. Port Connectivity Checks: "alu:alu|ror:ror_op"
+ 21. Port Connectivity Checks: "alu:alu|sub:sub_op"
+ 22. Port Connectivity Checks: "alu:alu|add:add_op"
+ 23. Port Connectivity Checks: "reg_32_bit:mar"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +57,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Feb 24 12:25:06 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 03 20:26:03 2025       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Phase1                                      ;
 ; Top-level Entity Name           ; Datapath                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 67                                          ;
+; Total registers                 ; 810                                         ;
+; Total pins                      ; 97                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
+; Total block memory bits         ; 16,384                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -165,74 +173,221 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; registers.v                      ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/registers.v       ;         ;
-; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v        ;         ;
-; and_32_bit.v                     ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v      ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/alu.v             ;         ;
-; add.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/add.v             ;         ;
-; mdr_mux_2_to_1.v                 ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v  ;         ;
-; logical_or.v                     ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v      ;         ;
-; bus_mux_32_to_1.v                ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v ;         ;
-; sub.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/sub.v             ;         ;
-; mul.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/mul.v             ;         ;
-; div.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/div.v             ;         ;
-; shr.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shr.v             ;         ;
-; neg.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/neg.v             ;         ;
-; not.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/not.v             ;         ;
-; shra.v                           ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shra.v            ;         ;
-; shl.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/shl.v             ;         ;
-; rol.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/rol.v             ;         ;
-; ror.v                            ; yes             ; User Verilog HDL File  ; C:/Users/cam/Downloads/374realfinal/Phase1/ror.v             ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------+---------+
+; registers.v                      ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v                      ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v                       ;         ;
+; and_32_bit.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v                     ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v                            ;         ;
+; add.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v                            ;         ;
+; mdr_mux_2_to_1.v                 ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v                 ;         ;
+; logical_or.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v                     ;         ;
+; bus_mux_32_to_1.v                ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v                ;         ;
+; sub.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v                            ;         ;
+; mul.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v                            ;         ;
+; div.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v                            ;         ;
+; shr.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v                            ;         ;
+; neg.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v                            ;         ;
+; not.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v                            ;         ;
+; shra.v                           ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v                           ;         ;
+; shl.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v                            ;         ;
+; rol.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v                            ;         ;
+; ror.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v                            ;         ;
+; select_and_encode.v              ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v              ;         ;
+; ram.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v                            ;         ;
+; conff.v                          ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v                          ;         ;
+; inport_and_outport.v             ; yes             ; User Verilog HDL File                                 ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v             ;         ;
+; ram_content.hex                  ; yes             ; User Hexadecimal (Intel-Format) File                  ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram_content.hex                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                    ;         ;
+; altram.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
+; db/altsyncram_h2r1.tdf           ; yes             ; Auto-Generated Megafunction                           ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/db/altsyncram_h2r1.tdf           ;         ;
+; db/phase1.ram0_ram_1d0cf.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/db/phase1.ram0_ram_1d0cf.hdl.mif ;         ;
++----------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimate of Logic utilization (ALMs needed) ; 0      ;
-;                                             ;        ;
-; Combinational ALUT usage for logic          ; 0      ;
-;     -- 7 input functions                    ; 0      ;
-;     -- 6 input functions                    ; 0      ;
-;     -- 5 input functions                    ; 0      ;
-;     -- 4 input functions                    ; 0      ;
-;     -- <=3 input functions                  ; 0      ;
-;                                             ;        ;
-; Dedicated logic registers                   ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 67     ;
-;                                             ;        ;
-; Total DSP Blocks                            ; 0      ;
-;                                             ;        ;
-; Maximum fan-out node                        ; pc_out ;
-; Maximum fan-out                             ; 1      ;
-; Total fan-out                               ; 67     ;
-; Average fan-out                             ; 0.50   ;
-+---------------------------------------------+--------+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 2297                                       ;
+;                                             ;                                            ;
+; Combinational ALUT usage for logic          ; 3541                                       ;
+;     -- 7 input functions                    ; 504                                        ;
+;     -- 6 input functions                    ; 443                                        ;
+;     -- 5 input functions                    ; 1355                                       ;
+;     -- 4 input functions                    ; 259                                        ;
+;     -- <=3 input functions                  ; 980                                        ;
+;                                             ;                                            ;
+; Dedicated logic registers                   ; 810                                        ;
+;                                             ;                                            ;
+; I/O pins                                    ; 97                                         ;
+; Total MLAB memory bits                      ; 0                                          ;
+; Total block memory bits                     ; 16384                                      ;
+;                                             ;                                            ;
+; Total DSP Blocks                            ; 0                                          ;
+;                                             ;                                            ;
+; Maximum fan-out node                        ; bus_mux_32_to_1:bus_mux|bus_mux_out[31]~19 ;
+; Maximum fan-out                             ; 1115                                       ;
+; Total fan-out                               ; 21932                                      ;
+; Average fan-out                             ; 4.79                                       ;
++---------------------------------------------+--------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Datapath                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 67   ; 0            ; |Datapath           ; Datapath    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Entity Name       ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+-------------------+--------------+
+; |Datapath                                 ; 3541 (0)            ; 810 (0)                   ; 16384             ; 0          ; 97   ; 0            ; |Datapath                                                                       ; Datapath          ; work         ;
+;    |alu:alu|                              ; 3097 (390)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu                                                               ; alu               ; work         ;
+;       |add:add_op|                        ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|add:add_op                                                    ; add               ; work         ;
+;       |and_32_bit:and_op|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|and_32_bit:and_op                                             ; and_32_bit        ; work         ;
+;       |div:div_op|                        ; 1251 (1251)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|div:div_op                                                    ; div               ; work         ;
+;       |mul:mul_op|                        ; 954 (954)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|mul:mul_op                                                    ; mul               ; work         ;
+;       |rol:rol_op|                        ; 130 (130)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|rol:rol_op                                                    ; rol               ; work         ;
+;       |ror:ror_op|                        ; 118 (118)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|ror:ror_op                                                    ; ror               ; work         ;
+;       |shr:shr_op|                        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|shr:shr_op                                                    ; shr               ; work         ;
+;       |shra:shra_op|                      ; 92 (92)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|shra:shra_op                                                  ; shra              ; work         ;
+;       |sub:sub_op|                        ; 91 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|sub:sub_op                                                    ; sub               ; work         ;
+;          |add:add_op|                     ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|alu:alu|sub:sub_op|add:add_op                                         ; add               ; work         ;
+;    |bus_mux_32_to_1:bus_mux|              ; 335 (335)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|bus_mux_32_to_1:bus_mux                                               ; bus_mux_32_to_1   ; work         ;
+;    |conff:conff|                          ; 10 (10)             ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|conff:conff                                                           ; conff             ; work         ;
+;    |inport:inport|                        ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|inport:inport                                                         ; inport            ; work         ;
+;    |pc_reg:pc|                            ; 66 (66)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|pc_reg:pc                                                             ; pc_reg            ; work         ;
+;    |ram:ram_memory|                       ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |Datapath|ram:ram_memory                                                        ; ram               ; work         ;
+;       |altsyncram:memory_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |Datapath|ram:ram_memory|altsyncram:memory_rtl_0                                ; altsyncram        ; work         ;
+;          |altsyncram_h2r1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384             ; 0          ; 0    ; 0            ; |Datapath|ram:ram_memory|altsyncram:memory_rtl_0|altsyncram_h2r1:auto_generated ; altsyncram_h2r1   ; work         ;
+;    |reg_32_bit:hi|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:hi                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:ir|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:ir                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:lo|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:lo                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:mar|                       ; 1 (1)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:mar                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:mdr|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:mdr                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r0|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r0                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r10|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r10                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r11|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r11                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r12|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r12                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r13|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r13                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r14|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r14                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r15|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r15                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r1|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r1                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r2|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r2                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r3|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r3                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r4|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r4                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r5|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r5                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r6|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r6                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r7|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r7                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r8|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r8                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:r9|                        ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:r9                                                         ; reg_32_bit        ; work         ;
+;    |reg_32_bit:y|                         ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:y                                                          ; reg_32_bit        ; work         ;
+;    |reg_32_bit:zhi|                       ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:zhi                                                        ; reg_32_bit        ; work         ;
+;    |reg_32_bit:zlo|                       ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Datapath|reg_32_bit:zlo                                                        ; reg_32_bit        ; work         ;
+;    |select_and_encode:select_mux|         ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Datapath|select_and_encode:select_mux                                          ; select_and_encode ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; Name                                                                             ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                              ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; ram:ram_memory|altsyncram:memory_rtl_0|altsyncram_h2r1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 512          ; 32           ; 512          ; 32           ; 16384 ; db/Phase1.ram0_ram_1d0cf.hdl.mif ;
++----------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; alu:alu|c[37]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[5]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[63]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[31]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[33]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[1]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[62]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[30]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[60]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[28]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[58]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[26]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[56]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[24]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[54]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[22]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[61]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[29]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[34]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[2]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[53]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[21]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[52]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[20]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[50]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[18]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[49]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[17]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[36]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[4]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[48]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[16]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[39]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[7]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[43]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[11]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[47]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[15]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[46]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[14]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[45]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[13]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[51]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[19]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[55]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[23]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[42]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[10]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[44]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[12]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[59]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[27]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[41]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[9]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[57]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[25]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[35]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[3]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[40]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[8]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[38]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[6]                                        ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[32]                                       ; alu:alu|Mux64       ; yes                    ;
+; alu:alu|c[0]                                        ; alu:alu|Mux64       ; yes                    ;
+; Number of user-specified and inferred latches = 64  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -240,14 +395,117 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 810   ;
+; Number of registers using Synchronous Clear  ; 809   ;
+; Number of registers using Synchronous Load   ; 64    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 777   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                        ;
++--------------------------------+-----------------------------+------+
+; Register Name                  ; Megafunction                ; Type ;
++--------------------------------+-----------------------------+------+
+; ram:ram_memory|data_out[0..31] ; ram:ram_memory|memory_rtl_0 ; RAM  ;
++--------------------------------+-----------------------------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |Datapath|reg_32_bit:mar|q[8]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:ir|q[0]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:zhi|q[21]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:lo|q[6]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:hi|q[6]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r15|q[27]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r14|q[19]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r13|q[29]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r12|q[31]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r11|q[13]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r10|q[14]                   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r9|q[14]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r8|q[14]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r7|q[0]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r6|q[18]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r5|q[15]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r4|q[8]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r3|q[1]                     ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r2|q[30]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r1|q[19]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:r0|q[19]                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:y|q[30]                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:zlo|q[3]                    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Datapath|reg_32_bit:mdr|q[29]                   ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; Yes        ; |Datapath|pc_reg:pc|pc_incremented[18]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftRight0         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftRight0         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftRight0         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shr:shr_op|ShiftLeft0          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shr:shr_op|ShiftLeft0          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shr:shr_op|ShiftLeft0          ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftLeft0          ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftLeft0          ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux11               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftRight0         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftRight0         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftLeft0        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shra:shra_op|ShiftRight0       ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|shr:shr_op|ShiftLeft0          ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 124 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux522              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux446              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux389              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux311              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux242              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux192              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux109              ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |Datapath|alu:alu|mul:mul_op|Mux43               ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|rol:rol_op|ShiftRight0         ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |Datapath|alu:alu|ror:ror_op|ShiftLeft0          ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux470              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux406              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux333              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux293              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux200              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux134              ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 120 LEs              ; 30 LEs                 ; No         ; |Datapath|alu:alu|mul:mul_op|Mux94               ;
+; 21:1               ; 32 bits   ; 448 LEs       ; 256 LEs              ; 192 LEs                ; No         ; |Datapath|alu:alu|Mux58                          ;
+; 21:1               ; 30 bits   ; 420 LEs       ; 270 LEs              ; 150 LEs                ; No         ; |Datapath|alu:alu|Mux14                          ;
+; 25:1               ; 32 bits   ; 512 LEs       ; 512 LEs              ; 0 LEs                  ; No         ; |Datapath|bus_mux_32_to_1:bus_mux|bus_mux_out[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Source assignments for ram:ram_memory|altsyncram:memory_rtl_0|altsyncram_h2r1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------+
+; Assignment                      ; Value              ; From ; To                             ;
++---------------------------------+--------------------+------+--------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                              ;
++---------------------------------+--------------------+------+--------------------------------+
 
 
 +------------------------------------------------------+
@@ -274,8 +532,108 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; mul_opcode     ; 10000 ; Unsigned Binary             ;
 ; neg_opcode     ; 10001 ; Unsigned Binary             ;
 ; not_opcode     ; 10010 ; Unsigned Binary             ;
+; br_opcode      ; 10011 ; Unsigned Binary             ;
 +----------------+-------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ram:ram_memory|altsyncram:memory_rtl_0 ;
++------------------------------------+----------------------------------+-----------------+
+; Parameter Name                     ; Value                            ; Type            ;
++------------------------------------+----------------------------------+-----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped         ;
+; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY      ;
+; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY    ;
+; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE    ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE  ;
+; WIDTH_BYTEENA                      ; 1                                ; Untyped         ;
+; OPERATION_MODE                     ; DUAL_PORT                        ; Untyped         ;
+; WIDTH_A                            ; 32                               ; Untyped         ;
+; WIDTHAD_A                          ; 9                                ; Untyped         ;
+; NUMWORDS_A                         ; 512                              ; Untyped         ;
+; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped         ;
+; ADDRESS_ACLR_A                     ; NONE                             ; Untyped         ;
+; OUTDATA_ACLR_A                     ; NONE                             ; Untyped         ;
+; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped         ;
+; INDATA_ACLR_A                      ; NONE                             ; Untyped         ;
+; BYTEENA_ACLR_A                     ; NONE                             ; Untyped         ;
+; WIDTH_B                            ; 32                               ; Untyped         ;
+; WIDTHAD_B                          ; 9                                ; Untyped         ;
+; NUMWORDS_B                         ; 512                              ; Untyped         ;
+; INDATA_REG_B                       ; CLOCK1                           ; Untyped         ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped         ;
+; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped         ;
+; ADDRESS_REG_B                      ; CLOCK0                           ; Untyped         ;
+; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped         ;
+; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped         ;
+; INDATA_ACLR_B                      ; NONE                             ; Untyped         ;
+; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped         ;
+; ADDRESS_ACLR_B                     ; NONE                             ; Untyped         ;
+; OUTDATA_ACLR_B                     ; NONE                             ; Untyped         ;
+; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped         ;
+; BYTEENA_ACLR_B                     ; NONE                             ; Untyped         ;
+; WIDTH_BYTEENA_A                    ; 1                                ; Untyped         ;
+; WIDTH_BYTEENA_B                    ; 1                                ; Untyped         ;
+; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped         ;
+; BYTE_SIZE                          ; 8                                ; Untyped         ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                         ; Untyped         ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped         ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped         ;
+; INIT_FILE                          ; db/Phase1.ram0_ram_1d0cf.hdl.mif ; Untyped         ;
+; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped         ;
+; MAXIMUM_DEPTH                      ; 0                                ; Untyped         ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                           ; Untyped         ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped         ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                           ; Untyped         ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped         ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped         ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped         ;
+; ENABLE_ECC                         ; FALSE                            ; Untyped         ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                            ; Untyped         ;
+; WIDTH_ECCSTATUS                    ; 3                                ; Untyped         ;
+; DEVICE_FAMILY                      ; Cyclone V                        ; Untyped         ;
+; CBXI_PARAMETER                     ; altsyncram_h2r1                  ; Untyped         ;
++------------------------------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                   ;
++-------------------------------------------+----------------------------------------+
+; Name                                      ; Value                                  ;
++-------------------------------------------+----------------------------------------+
+; Number of entity instances                ; 1                                      ;
+; Entity Instance                           ; ram:ram_memory|altsyncram:memory_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                              ;
+;     -- WIDTH_A                            ; 32                                     ;
+;     -- NUMWORDS_A                         ; 512                                    ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                           ;
+;     -- WIDTH_B                            ; 32                                     ;
+;     -- NUMWORDS_B                         ; 512                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                               ;
++-------------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "outport:outport"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram:ram_memory"                                                                                                                                                                   ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; addr ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -318,36 +676,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32_bit:mar"                                                                                                        ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[31..1]" have no fanouts ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "reg_32_bit:ir"                                                                                                         ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "q[31..1]" have no fanouts ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reg_32_bit:mar"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; q[31..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 67                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 810                         ;
+;     ENA SCLR          ; 713                         ;
+;     ENA SCLR SLD      ; 64                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 3541                        ;
+;     arith             ; 1406                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 160                         ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 92                          ;
+;         4 data inputs ; 126                         ;
+;         5 data inputs ; 965                         ;
+;     extend            ; 504                         ;
+;         7 data inputs ; 504                         ;
+;     normal            ; 1359                        ;
+;         2 data inputs ; 45                          ;
+;         3 data inputs ; 350                         ;
+;         4 data inputs ; 131                         ;
+;         5 data inputs ; 390                         ;
+;         6 data inputs ; 443                         ;
+;     shared            ; 272                         ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 250                         ;
+;         4 data inputs ; 2                           ;
+; boundary_port         ; 97                          ;
+; stratixv_ram_block    ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 145.10                      ;
+; Average LUT depth     ; 88.45                       ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -355,7 +728,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -365,262 +738,419 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Feb 24 12:24:57 2025
+    Info: Processing started: Thu Apr 03 20:25:40 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Phase1 -c Phase1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file registers.v
-    Info (12023): Found entity 1: reg_32_bit File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v Line: 1
-    Info (12023): Found entity 2: pc_reg File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v Line: 22
+Info (12021): Found 3 design units, including 3 entities, in source file registers.v
+    Info (12023): Found entity 1: reg_32_bit File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 1
+    Info (12023): Found entity 2: c_sign_extended_reg File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 22
+    Info (12023): Found entity 3: pc_reg File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
-    Info (12023): Found entity 1: Datapath File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 1
+    Info (12023): Found entity 1: Datapath File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_tb.v
-    Info (12023): Found entity 1: and_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/and_tb.v Line: 3
+    Info (12023): Found entity 1: and_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file and_32_bit.v
-    Info (12023): Found entity 1: and_32_bit File: C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v Line: 1
+    Info (12023): Found entity 1: and_32_bit File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 1
+    Info (12023): Found entity 1: alu File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file add.v
-    Info (12023): Found entity 1: add File: C:/Users/cam/Downloads/374realfinal/Phase1/add.v Line: 2
+    Info (12023): Found entity 1: add File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file add_tb.v
-    Info (12023): Found entity 1: add_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/add_tb.v Line: 3
+    Info (12023): Found entity 1: add_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mdr_mux_2_to_1.v
-    Info (12023): Found entity 1: mdr_mux_2_to_1 File: C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v Line: 1
+    Info (12023): Found entity 1: mdr_mux_2_to_1 File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file logical_or.v
-    Info (12023): Found entity 1: logical_or File: C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v Line: 1
+    Info (12023): Found entity 1: logical_or File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_tb.v
-    Info (12023): Found entity 1: or_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/or_tb.v Line: 3
+    Info (12023): Found entity 1: or_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/or_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bus_mux_32_to_1.v
-    Info (12023): Found entity 1: bus_mux_32_to_1 File: C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v Line: 1
+    Info (12023): Found entity 1: bus_mux_32_to_1 File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sub.v
-    Info (12023): Found entity 1: sub File: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v Line: 1
+    Info (12023): Found entity 1: sub File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sub_tb.v
-    Info (12023): Found entity 1: sub_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/sub_tb.v Line: 3
+    Info (12023): Found entity 1: sub_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mul.v
-    Info (12023): Found entity 1: mul File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 1
+    Info (12023): Found entity 1: mul File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mul_tb.v
-    Info (12023): Found entity 1: mul_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/mul_tb.v Line: 3
+    Info (12023): Found entity 1: mul_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file div.v
-    Info (12023): Found entity 1: div File: C:/Users/cam/Downloads/374realfinal/Phase1/div.v Line: 1
+    Info (12023): Found entity 1: div File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file div_tb.v
-    Info (12023): Found entity 1: div_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/div_tb.v Line: 3
+    Info (12023): Found entity 1: div_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shr.v
-    Info (12023): Found entity 1: shr File: C:/Users/cam/Downloads/374realfinal/Phase1/shr.v Line: 1
+    Info (12023): Found entity 1: shr File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shr_tb.v
-    Info (12023): Found entity 1: shr_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shr_tb.v Line: 3
+    Info (12023): Found entity 1: shr_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file neg.v
-    Info (12023): Found entity 1: logical_neg File: C:/Users/cam/Downloads/374realfinal/Phase1/neg.v Line: 1
+    Info (12023): Found entity 1: logical_neg File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file not.v
-    Info (12023): Found entity 1: logical_not File: C:/Users/cam/Downloads/374realfinal/Phase1/not.v Line: 1
+    Info (12023): Found entity 1: logical_not File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file neg_tb.v
-    Info (12023): Found entity 1: neg_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/neg_tb.v Line: 3
+    Info (12023): Found entity 1: neg_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shra.v
-    Info (12023): Found entity 1: shra File: C:/Users/cam/Downloads/374realfinal/Phase1/shra.v Line: 1
+    Info (12023): Found entity 1: shra File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file shl.v
-    Info (12023): Found entity 1: shl File: C:/Users/cam/Downloads/374realfinal/Phase1/shl.v Line: 1
+    Info (12023): Found entity 1: shl File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rol.v
-    Info (12023): Found entity 1: rol File: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v Line: 1
+    Info (12023): Found entity 1: rol File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ror.v
-    Info (12023): Found entity 1: ror File: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v Line: 1
+    Info (12023): Found entity 1: ror File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file not_tb.v
-    Info (12023): Found entity 1: not_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v Line: 3
+    Info (12023): Found entity 1: not_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shra_tb.v
-    Info (12023): Found entity 1: shra_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shra_tb.v Line: 3
+    Info (12023): Found entity 1: shra_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shl_tb.v
-    Info (12023): Found entity 1: shl_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/shl_tb.v Line: 3
+    Info (12023): Found entity 1: shl_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file ror_tb.v
-    Info (12023): Found entity 1: ror_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/ror_tb.v Line: 3
+    Info (12023): Found entity 1: ror_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror_tb.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file rol_tb.v
-    Info (12023): Found entity 1: rol_tb File: C:/Users/cam/Downloads/374realfinal/Phase1/rol_tb.v Line: 3
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(86): created implicit net for "r1_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 86
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(93): created implicit net for "r8_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 93
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(94): created implicit net for "r9_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 94
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(95): created implicit net for "r10_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 95
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(96): created implicit net for "r11_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 96
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(97): created implicit net for "r12_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 97
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(98): created implicit net for "r13_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 98
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(99): created implicit net for "r14_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 99
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(100): created implicit net for "r15_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 100
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(107): created implicit net for "ir_data" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 107
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(108): created implicit net for "mar_data" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 108
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(136): created implicit net for "r1_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 136
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r8_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r9_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r10_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(138): created implicit net for "r11_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 138
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r12_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r13_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r14_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(139): created implicit net for "r15_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 139
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(140): created implicit net for "hi_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(140): created implicit net for "lo_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 140
-Warning (10236): Verilog HDL Implicit Net warning at alu.v(29): created implicit net for "cout" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 29
+    Info (12023): Found entity 1: rol_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file select_and_encode.v
+    Info (12023): Found entity 1: select_and_encode File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: ram File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file conff.v
+    Info (12023): Found entity 1: conff File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v Line: 1
+    Info (12023): Found entity 2: decoder2to4 File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v Line: 29
+Info (12021): Found 2 design units, including 2 entities, in source file inport_and_outport.v
+    Info (12023): Found entity 1: outport File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v Line: 1
+    Info (12023): Found entity 2: inport File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file ld_tb.v
+    Info (12023): Found entity 1: ld_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ld_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ldi_tb.v
+    Info (12023): Found entity 1: ldi_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ldi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file st_tb.v
+    Info (12023): Found entity 1: st_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file branch_tb.v
+    Info (12023): Found entity 1: branch_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/branch_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file andi_tb.v
+    Info (12023): Found entity 1: andi_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/andi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file addi_tb.v
+    Info (12023): Found entity 1: addi_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/addi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file ori_tb.v
+    Info (12023): Found entity 1: ori_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ori_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file jr_tb.v
+    Info (12023): Found entity 1: jr_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/jr_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file jal_tb.v
+    Info (12023): Found entity 1: jal_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/jal_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mfhi_tb.v
+    Info (12023): Found entity 1: mfhi_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mfhi_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mflo_tb.v
+    Info (12023): Found entity 1: mflo_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mflo_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file out_tb.v
+    Info (12023): Found entity 1: out_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/out_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file in_tb.v
+    Info (12023): Found entity 1: in_tb File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/in_tb.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(103): created implicit net for "r0_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(106): created implicit net for "r1_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 106
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(107): created implicit net for "r2_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 107
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(108): created implicit net for "r3_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 108
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(109): created implicit net for "r4_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 109
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(110): created implicit net for "r5_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 110
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(111): created implicit net for "r6_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 111
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(112): created implicit net for "r7_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 112
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(115): created implicit net for "r9_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 115
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(116): created implicit net for "r10_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 116
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(117): created implicit net for "r11_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 117
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(118): created implicit net for "r12_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 118
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(119): created implicit net for "r13_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 119
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(120): created implicit net for "r14_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 120
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(121): created implicit net for "r15_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 121
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(144): created implicit net for "r0_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(144): created implicit net for "r1_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(144): created implicit net for "r2_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(144): created implicit net for "r3_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 144
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(145): created implicit net for "r4_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(145): created implicit net for "r5_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(145): created implicit net for "r6_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(145): created implicit net for "r7_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 145
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(146): created implicit net for "r8_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 146
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(146): created implicit net for "r9_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 146
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(146): created implicit net for "r10_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 146
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(146): created implicit net for "r11_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 146
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(147): created implicit net for "r12_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(147): created implicit net for "r13_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(147): created implicit net for "r14_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(147): created implicit net for "r15_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 147
+Warning (10236): Verilog HDL Implicit Net warning at alu.v(29): created implicit net for "cout" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at branch_tb.v(71): created implicit net for "con_out" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/branch_tb.v Line: 71
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Info (12128): Elaborating entity "reg_32_bit" for hierarchy "reg_32_bit:r0" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 85
-Info (12128): Elaborating entity "pc_reg" for hierarchy "pc_reg:pc" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 110
-Info (12128): Elaborating entity "mdr_mux_2_to_1" for hierarchy "mdr_mux_2_to_1:mdr_mux" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 119
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 130
-Warning (10270): Verilog HDL Case Statement warning at alu.v(63): incomplete case statement has no default case item File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Warning (10240): Verilog HDL Always Construct warning at alu.v(63): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[0]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[1]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[2]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[3]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[4]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[5]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[6]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[7]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[8]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[9]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[10]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[11]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[12]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[13]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[14]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[15]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[16]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[17]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[18]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[19]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[20]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[21]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[22]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[23]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[24]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[25]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[26]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[27]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[28]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[29]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[30]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[31]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[32]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[33]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[34]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[35]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[36]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[37]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[38]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[39]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[40]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[41]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[42]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[43]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[44]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[45]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[46]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[47]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[48]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[49]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[50]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[51]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[52]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[53]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[54]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[55]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[56]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[57]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[58]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[59]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[60]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[61]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[62]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (10041): Inferred latch for "c[63]" at alu.v(63) File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 63
-Info (12128): Elaborating entity "and_32_bit" for hierarchy "alu:alu|and_32_bit:and_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 26
-Info (12128): Elaborating entity "logical_or" for hierarchy "alu:alu|logical_or:or_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 27
-Info (12128): Elaborating entity "add" for hierarchy "alu:alu|add:add_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 28
-Info (12128): Elaborating entity "sub" for hierarchy "alu:alu|sub:sub_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 29
-Info (12128): Elaborating entity "mul" for hierarchy "alu:alu|mul:mul_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 30
-Warning (10199): Verilog HDL Case Statement warning at mul.v(20): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 20
-Warning (10199): Verilog HDL Case Statement warning at mul.v(21): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 21
-Warning (10199): Verilog HDL Case Statement warning at mul.v(23): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/Phase1/mul.v Line: 23
-Info (12128): Elaborating entity "div" for hierarchy "alu:alu|div:div_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 31
-Info (12128): Elaborating entity "shr" for hierarchy "alu:alu|shr:shr_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 32
-Info (12128): Elaborating entity "shra" for hierarchy "alu:alu|shra:shra_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 33
-Info (12128): Elaborating entity "shl" for hierarchy "alu:alu|shl:shl_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 34
-Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 35
-Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 36
-Info (12128): Elaborating entity "logical_neg" for hierarchy "alu:alu|logical_neg:neg_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 37
-Info (12128): Elaborating entity "logical_not" for hierarchy "alu:alu|logical_not:not_op" File: C:/Users/cam/Downloads/374realfinal/Phase1/alu.v Line: 38
-Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:bus_mux" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 150
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "reg_32_bit" for hierarchy "reg_32_bit:r0" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 103
+Info (12128): Elaborating entity "pc_reg" for hierarchy "pc_reg:pc" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 134
+Info (12128): Elaborating entity "select_and_encode" for hierarchy "select_and_encode:select_mux" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 157
+Info (12128): Elaborating entity "mdr_mux_2_to_1" for hierarchy "mdr_mux_2_to_1:mdr_mux" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 166
+Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 175
+Warning (10270): Verilog HDL Case Statement warning at alu.v(64): incomplete case statement has no default case item File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Warning (10240): Verilog HDL Always Construct warning at alu.v(64): inferring latch(es) for variable "c", which holds its previous value in one or more paths through the always construct File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[0]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[1]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[2]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[3]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[4]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[5]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[6]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[7]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[8]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[9]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[10]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[11]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[12]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[13]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[14]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[15]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[16]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[17]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[18]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[19]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[20]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[21]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[22]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[23]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[24]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[25]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[26]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[27]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[28]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[29]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[30]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[31]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[32]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[33]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[34]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[35]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[36]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[37]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[38]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[39]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[40]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[41]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[42]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[43]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[44]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[45]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[46]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[47]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[48]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[49]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[50]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[51]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[52]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[53]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[54]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[55]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[56]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[57]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[58]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[59]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[60]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[61]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[62]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (10041): Inferred latch for "c[63]" at alu.v(64) File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+Info (12128): Elaborating entity "and_32_bit" for hierarchy "alu:alu|and_32_bit:and_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 26
+Info (12128): Elaborating entity "logical_or" for hierarchy "alu:alu|logical_or:or_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 27
+Info (12128): Elaborating entity "add" for hierarchy "alu:alu|add:add_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 28
+Info (12128): Elaborating entity "sub" for hierarchy "alu:alu|sub:sub_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 29
+Info (12128): Elaborating entity "mul" for hierarchy "alu:alu|mul:mul_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 30
+Warning (10199): Verilog HDL Case Statement warning at mul.v(20): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v Line: 20
+Warning (10199): Verilog HDL Case Statement warning at mul.v(21): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v Line: 21
+Warning (10199): Verilog HDL Case Statement warning at mul.v(23): case item expression never matches the case expression File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v Line: 23
+Info (12128): Elaborating entity "div" for hierarchy "alu:alu|div:div_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 31
+Info (12128): Elaborating entity "shr" for hierarchy "alu:alu|shr:shr_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 32
+Info (12128): Elaborating entity "shra" for hierarchy "alu:alu|shra:shra_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 33
+Info (12128): Elaborating entity "shl" for hierarchy "alu:alu|shl:shl_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 34
+Info (12128): Elaborating entity "ror" for hierarchy "alu:alu|ror:ror_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 35
+Info (12128): Elaborating entity "rol" for hierarchy "alu:alu|rol:rol_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 36
+Info (12128): Elaborating entity "logical_neg" for hierarchy "alu:alu|logical_neg:neg_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 37
+Info (12128): Elaborating entity "logical_not" for hierarchy "alu:alu|logical_not:not_op" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 38
+Info (12128): Elaborating entity "bus_mux_32_to_1" for hierarchy "bus_mux_32_to_1:bus_mux" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 195
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_memory" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 203
+Info (12128): Elaborating entity "conff" for hierarchy "conff:conff" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 212
+Info (12128): Elaborating entity "decoder2to4" for hierarchy "conff:conff|decoder2to4:decoder1" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v Line: 10
+Info (12128): Elaborating entity "inport" for hierarchy "inport:inport" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 215
+Info (12128): Elaborating entity "outport" for hierarchy "outport:outport" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 216
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "ram:ram_memory|memory_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 9
+        Info (286033): Parameter NUMWORDS_A set to 512
+        Info (286033): Parameter WIDTH_B set to 32
+        Info (286033): Parameter WIDTHAD_B set to 9
+        Info (286033): Parameter NUMWORDS_B set to 512
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/Phase1.ram0_ram_1d0cf.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "ram:ram_memory|altsyncram:memory_rtl_0"
+Info (12133): Instantiated megafunction "ram:ram_memory|altsyncram:memory_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "9"
+    Info (12134): Parameter "NUMWORDS_A" = "512"
+    Info (12134): Parameter "WIDTH_B" = "32"
+    Info (12134): Parameter "WIDTHAD_B" = "9"
+    Info (12134): Parameter "NUMWORDS_B" = "512"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/Phase1.ram0_ram_1d0cf.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h2r1.tdf
+    Info (12023): Found entity 1: altsyncram_h2r1 File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/db/altsyncram_h2r1.tdf Line: 27
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch alu:alu|c[37] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[5] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[63] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[31] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[33] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[1] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[29] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[62] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[30] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[60] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[28] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[58] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[26] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[56] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[24] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[54] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[22] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[61] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[29] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[34] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[2] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[53] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[21] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[52] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[20] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[50] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[18] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[49] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[17] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[36] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[4] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[48] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[16] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[39] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[7] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[43] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[11] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[47] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[15] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[46] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[14] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[45] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[13] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[51] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[19] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[55] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[23] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[42] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[10] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[44] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[12] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[59] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[27] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[41] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[9] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[57] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[25] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[35] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[3] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[40] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[8] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[38] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[6] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[32] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[31] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Warning (13012): Latch alu:alu|c[0] has unsafe behavior File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v Line: 64
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reg_32_bit:ir|q[29] File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v Line: 13
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 67 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "pc_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 2
-    Warning (15610): No output dependent on input pin "zlo_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 3
-    Warning (15610): No output dependent on input pin "zhi_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 4
-    Warning (15610): No output dependent on input pin "mdr_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 5
-    Warning (15610): No output dependent on input pin "r0_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 6
-    Warning (15610): No output dependent on input pin "r2_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 7
-    Warning (15610): No output dependent on input pin "r3_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 8
-    Warning (15610): No output dependent on input pin "r4_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 9
-    Warning (15610): No output dependent on input pin "r5_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 10
-    Warning (15610): No output dependent on input pin "r6_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 11
-    Warning (15610): No output dependent on input pin "r7_out" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 12
-    Warning (15610): No output dependent on input pin "mar_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 13
-    Warning (15610): No output dependent on input pin "z_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 14
-    Warning (15610): No output dependent on input pin "lo_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 15
-    Warning (15610): No output dependent on input pin "hi_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 16
-    Warning (15610): No output dependent on input pin "pc_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 17
-    Warning (15610): No output dependent on input pin "mdr_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 18
-    Warning (15610): No output dependent on input pin "ir_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 19
-    Warning (15610): No output dependent on input pin "y_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 20
-    Warning (15610): No output dependent on input pin "pc_increment" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 21
-    Warning (15610): No output dependent on input pin "read" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 22
-    Warning (15610): No output dependent on input pin "op_code[0]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
-    Warning (15610): No output dependent on input pin "op_code[1]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
-    Warning (15610): No output dependent on input pin "op_code[2]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
-    Warning (15610): No output dependent on input pin "op_code[3]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
-    Warning (15610): No output dependent on input pin "op_code[4]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 23
-    Warning (15610): No output dependent on input pin "r0_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 24
-    Warning (15610): No output dependent on input pin "r2_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 25
-    Warning (15610): No output dependent on input pin "r3_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 26
-    Warning (15610): No output dependent on input pin "r4_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 27
-    Warning (15610): No output dependent on input pin "r5_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 28
-    Warning (15610): No output dependent on input pin "r6_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 29
-    Warning (15610): No output dependent on input pin "r7_enable" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 30
-    Warning (15610): No output dependent on input pin "clr" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 31
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 32
-    Warning (15610): No output dependent on input pin "m_data_in[0]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[1]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[2]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[3]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[4]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[5]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[6]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[7]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[8]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[9]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[10]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[11]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[12]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[13]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[14]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[15]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[16]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[17]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[18]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[19]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[20]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[21]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[22]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[23]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[24]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[25]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[26]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[27]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[28]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[29]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[30]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-    Warning (15610): No output dependent on input pin "m_data_in[31]" File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v Line: 34
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 67 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 98 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Mon Feb 24 12:25:06 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:07
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "outport_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 7
+    Warning (15610): No output dependent on input pin "inport_enable" File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v Line: 8
+Info (21057): Implemented 4447 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 96 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 4318 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 171 warnings
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Thu Apr 03 20:26:03 2025
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:31
 
 

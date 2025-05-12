@@ -7,445 +7,599 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/cam/Downloads/374realfinal/Phase1/simulation/modelsim
+Z0 dC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/simulation/modelsim
 vadd
-Z1 !s110 1740435725
+Z1 !s110 1743726515
 !i10b 1
 !s100 5`dZGbF8_?`Ha2f1J9e521
-IJ1QbI3Gbm9N0U;ZnRO?Dd2
+IPjJG9X`l?P]m5Kd;ZJ[Ze3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1740376055
-8C:/Users/cam/Downloads/374realfinal/Phase1/add.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/add.v
+w1742846223
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v
 L0 2
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1740435725.000000
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/add.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/add.v|
+Z4 !s108 1743726515.000000
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1
-Z8 tCvgOpt 0
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2
+Z7 tCvgOpt 0
 valu
 R1
 !i10b 1
-!s100 >TU80<1n5l[gaWe1I?AE@3
-IU57]KzATCUfNhR28NhTPV1
+!s100 WDRb0B`hmhBBN8aQmbdiE0
+IMe<>Z92m4Rj2FP[VUbdGJ0
 R2
 R0
-R3
-8C:/Users/cam/Downloads/374realfinal/Phase1/alu.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/alu.v
+w1742850812
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/alu.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/alu.v|
+R4
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v|
 !i113 1
+R5
 R6
 R7
-R8
 vand_32_bit
 R1
 !i10b 1
 !s100 `>i@db:goB;BbmB:HZMSQ1
-IT@8Pz=DLiH:daC`YSR4IA2
+I_f7MSRFhT0JUk6INd6n<13
 R2
 R0
-R3
-8C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v
+Z8 w1742846224
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v|
+R4
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v|
 !i113 1
+R5
 R6
 R7
-R8
 vbus_mux_32_to_1
-R1
+Z9 !s110 1743726516
 !i10b 1
-!s100 9BW=M3;_WfKX9;i9]jmNi2
-I8DcU[bSld036OU<5a8@;z3
+!s100 gH2VSRJ?>J>5`JQT=b0Kd2
+I]1m3BokD1LjQVneJghf`l2
 R2
 R0
-R3
-8C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v
+R8
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+Z10 !s108 1743726516.000000
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v|
+!i113 1
 R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v|
-!i113 1
 R6
 R7
-R8
-vDatapath
-Z9 !s110 1740435724
+vc_sign_extended_reg
+R1
 !i10b 1
-!s100 kV1P0XmXQbW=5M3Qoke7<0
-IERZFI48VXc@<n=^9Aok3Y1
+!s100 UI2[U6=OS5;hiQ9iog2T_0
+IA;_7LZVHcNc1jb^`o=eTB0
 R2
 R0
+Z11 w1742853263
+Z12 8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v
+Z13 FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v
+Z14 L0 22
 R3
-8C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v
-L0 1
-R4
 r1
 !s85 0
 31
-Z10 !s108 1740435724.000000
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v|
+R4
+Z15 !s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v|
+Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v|
 !i113 1
+R5
 R6
 R7
+vconff
+Z17 !s110 1743726517
+!i10b 1
+!s100 CN1P53UF@6`2YOGjJm6YY0
+IfTb`mLb=l;oemiRlh4i?41
+R2
+R0
 R8
-n@datapath
-vdiv
+Z18 8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v
+Z19 FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z20 !s108 1743726517.000000
+Z21 !s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v|
+Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v|
+!i113 1
+R5
+R6
+R7
+vDatapath
 R1
+!i10b 1
+!s100 35J=H<`hAhUA0l7h9EP:B1
+IO6NezTA3Yzeo2K^mgU]1F1
+R2
+R0
+w1742853258
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v|
+!i113 1
+R5
+R6
+R7
+n@datapath
+vdecoder2to4
+R17
+!i10b 1
+!s100 fSj^]g:jHObDn2FSac9@j3
+IM4IPmD;TGYQNoVm`LnCM73
+R2
+R0
+R8
+R18
+R19
+L0 29
+R3
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R5
+R6
+R7
+vdiv
+R9
 !i10b 1
 !s100 DAckfiSDi>7^kjdYFTR`L2
-IXLCWRWRlj2?<Q;73282^e0
+ImZ`Wo`m33zco8eF?HhUfl2
 R2
 R0
-R3
-8C:/Users/cam/Downloads/374realfinal/Phase1/div.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/div.v
+R8
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/div.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/div.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v|
 !i113 1
+R5
 R6
 R7
+vinport
+R17
+!i10b 1
+!s100 Goe>:Q:ieoaX5C9kVE?2L2
+IlkO_oe:TP_ZfA?a^2lVNY1
+R2
+R0
 R8
+Z23 8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v
+Z24 FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v
+R14
+R3
+r1
+!s85 0
+31
+R20
+Z25 !s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v|
+Z26 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v|
+!i113 1
+R5
+R6
+R7
 vlogical_neg
-R1
+R9
 !i10b 1
 !s100 Ikgc;cGSa9=[G:N0P:aV@3
-IcZ:TKHaJf4ZMehHC9aJT51
+I:V;]Of]4`7K0CN`;i71[C0
 R2
 R0
-Z11 w1740376056
-8C:/Users/cam/Downloads/374realfinal/Phase1/neg.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/neg.v
+Z27 w1742846225
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/neg.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/neg.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v|
 !i113 1
+R5
 R6
 R7
-R8
 vlogical_not
-R1
+R9
 !i10b 1
 !s100 g9^EN?^HK=<R?U^aZXK012
-I]Cb4:aNlOU`W`XiYK=EH]0
+IW6WDEB04omIdVeOI`]L?41
 R2
 R0
-R11
-8C:/Users/cam/Downloads/374realfinal/Phase1/not.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/not.v
+R27
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/not.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/not.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v|
 !i113 1
+R5
 R6
 R7
-R8
 vlogical_or
-R1
+R9
 !i10b 1
 !s100 ]2BDJICKJV887U1LDz:G@0
-I0lzaFoGFJecEFhFYa>Fza0
+I`IOnan2VJGKl8XOZ`QaCQ2
 R2
 R0
-R11
-8C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v
+R27
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v|
 !i113 1
+R5
 R6
 R7
-R8
 vmdr_mux_2_to_1
 R1
 !i10b 1
 !s100 gDKSk59DICz[nj5lmmAYU0
-Il3az[Vg1NaVTzGYQESLD_0
+I:3j^h8e_bN0a?lfI7]92J2
 R2
 R0
-R11
-8C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v
+R27
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v|
+R4
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v|
 !i113 1
+R5
 R6
 R7
-R8
 vmul
-R1
+R9
 !i10b 1
 !s100 `bhH9JQoL]d200Z9S5M0j2
-I3nO2hCDzB2GCloKYBW_<k1
+I2Q0SBNb:Q>;Yg7H8H716z3
 R2
 R0
-w1740410644
-8C:/Users/cam/Downloads/374realfinal/Phase1/mul.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/mul.v
+R27
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v|
+!i113 1
 R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/mul.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/mul.v|
-!i113 1
 R6
 R7
-R8
-vnot_tb
-Z12 !s110 1740435726
+voutport
+R17
 !i10b 1
-!s100 AkW5VQZ?52Q3Oj0lhZ0J41
-IEhUi7j20ND8gl1PIY>1Qg0
+!s100 ;0KN<3`4Q?aCDc^SU4SEX2
+Ik[jSk@DD=CNc2m2Z[H_kC1
 R2
 R0
-R11
-8C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v
-L0 3
-R4
-r1
-!s85 0
-31
-!s108 1740435726.000000
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v|
-!i113 1
-R6
-R7
 R8
-vpc_reg
-R9
-!i10b 1
-!s100 6kIOK4f8JNj5h:?jXg`Zk1
-I7?fckCLP0Q6OcUzB4:JL=0
-R2
-R0
-R11
-Z13 8C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-Z14 FC:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-L0 22
-R4
-r1
-!s85 0
-31
-R10
-Z15 !s107 C:/Users/cam/Downloads/374realfinal/Phase1/registers.v|
-Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/registers.v|
-!i113 1
-R6
-R7
-R8
-vreg_32_bit
-R9
-!i10b 1
-!s100 h:H]i;5D;Ukk;cQAIQFkB3
-IXIf69ic:PQPL:7S@;1YT00
-R2
-R0
-R11
-R13
-R14
+R23
+R24
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R10
+R20
+R25
+R26
+!i113 1
+R5
+R6
+R7
+vpc_reg
+R1
+!i10b 1
+!s100 C[ga9PVTLGR1L]TTE]6Z<0
+IVmGoYX<j9QjR7?Q=38a2U0
+R2
+R0
+R11
+R12
+R13
+L0 39
+R3
+r1
+!s85 0
+31
+R4
 R15
 R16
 !i113 1
+R5
 R6
 R7
-R8
-vrol
+vram
+R17
+!i10b 1
+!s100 LE0Fd4am]g_lU<Mo[R_=O0
+IO;[<[T;_:FXe=:HRlbHgM1
+R2
+R0
+Z28 w1742846226
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v
+L0 1
+R3
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v|
+!i113 1
+R5
+R6
+R7
+vreg_32_bit
 R1
+!i10b 1
+!s100 h:H]i;5D;Ukk;cQAIQFkB3
+IbmA@2XOH2I9O1DVChaR^?2
+R2
+R0
+R11
+R12
+R13
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R15
+R16
+!i113 1
+R5
+R6
+R7
+vrol
+R17
 !i10b 1
 !s100 [9cjmUCV]99kz2VPHJNM@1
-I9oXW7fSj2EToWcMEB_R4A1
+I0N?;;]aa_]zY;RDX9J>c10
 R2
 R0
-Z17 w1740376057
-8C:/Users/cam/Downloads/374realfinal/Phase1/rol.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/rol.v
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/rol.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/rol.v|
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v|
 !i113 1
+R5
 R6
 R7
-R8
 vror
-R12
+R17
 !i10b 1
 !s100 A<Td0]6jSGaWTBje[11]h3
-IUVoeI`z]5^c`n<^b4ZRNP1
+I<TeFl>02D;9R24]8lhA;l2
 R2
 R0
-R17
-8C:/Users/cam/Downloads/374realfinal/Phase1/ror.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/ror.v
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/ror.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/ror.v|
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v|
 !i113 1
+R5
 R6
 R7
-R8
+vselect_and_encode
+R17
+!i10b 1
+!s100 5hOjV28VbM7^?CUz<14Nz2
+Ijb:WXe5ODV4jBzb=4A_8D0
+R2
+R0
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v
+L0 1
+R3
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v|
+!i113 1
+R5
+R6
+R7
 vshl
-R1
+R17
 !i10b 1
 !s100 XSW]9]Tm]?[HBo7G]Bo?g2
-IeDGbjMzQS3Jd26h_Jec;K0
+IGe[RPgE1UHHjUiL@3@UjA1
 R2
 R0
-R17
-8C:/Users/cam/Downloads/374realfinal/Phase1/shl.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/shl.v
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/shl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/shl.v|
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v|
 !i113 1
+R5
 R6
 R7
-R8
 vshr
-R1
+R9
 !i10b 1
 !s100 P5z4P]LNmbO`60oo`EbbD1
-I_:f4M>3ddmJf57If3V>Ua1
+IdP::oaEICcJeKVD3F:f]J3
 R2
 R0
-R17
-8C:/Users/cam/Downloads/374realfinal/Phase1/shr.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/shr.v
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/shr.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/shr.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v|
 !i113 1
+R5
 R6
 R7
-R8
 vshra
-R1
+R17
 !i10b 1
 !s100 [7Fm2XAz75h97Z<ZS_2mA0
-I85C@S1K9Bi^hm?`8:^WFL2
+IBlA8OC?i5^iYkOGM?X_8X0
 R2
 R0
-R17
-8C:/Users/cam/Downloads/374realfinal/Phase1/shra.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/shra.v
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/shra.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/shra.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v|
 !i113 1
+R5
 R6
 R7
-R8
+vst_tb
+R17
+!i10b 1
+!s100 N0OkmGf88cNnTVcJRCb9P2
+IOPnYPREfMnQhL]aKd[B:z2
+R2
+R0
+R28
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R20
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v|
+!i113 1
+R5
+R6
+R7
 vsub
-R1
+R9
 !i10b 1
 !s100 EY:Yf7ocd_W0bPE@1Ifzi2
-IKL3=gMQ0KanQ?OTM@C:3J1
+IELR1aXI?KDDf<KDW7AD3:0
 R2
 R0
-R17
-8C:/Users/cam/Downloads/374realfinal/Phase1/sub.v
-FC:/Users/cam/Downloads/374realfinal/Phase1/sub.v
+w1742846227
+8C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v
+FC:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v
 L0 1
-R4
+R3
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/cam/Downloads/374realfinal/Phase1/sub.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/Phase1|C:/Users/cam/Downloads/374realfinal/Phase1/sub.v|
+R10
+!s107 C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2|C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v|
 !i113 1
+R5
 R6
 R7
-R8

@@ -10,207 +10,253 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/registers.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:04 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/registers.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/registers.v 
 # -- Compiling module reg_32_bit
+# -- Compiling module c_sign_extended_reg
 # -- Compiling module pc_reg
 # 
 # Top level modules:
 # 	reg_32_bit
+# 	c_sign_extended_reg
 # 	pc_reg
-# End time: 17:22:04 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:04 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v 
 # -- Compiling module Datapath
 # 
 # Top level modules:
 # 	Datapath
-# End time: 17:22:04 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/and_32_bit.v 
 # -- Compiling module and_32_bit
 # 
 # Top level modules:
 # 	and_32_bit
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/alu.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/alu.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/add.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/add.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v 
 # -- Compiling module add
 # 
 # Top level modules:
 # 	add
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v 
+# Start time: 20:28:35 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mdr_mux_2_to_1.v 
 # -- Compiling module mdr_mux_2_to_1
 # 
 # Top level modules:
 # 	mdr_mux_2_to_1
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:35 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/logical_or.v 
 # -- Compiling module logical_or
 # 
 # Top level modules:
 # 	logical_or
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/bus_mux_32_to_1.v 
 # -- Compiling module bus_mux_32_to_1
 # 
 # Top level modules:
 # 	bus_mux_32_to_1
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/sub.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/sub.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v 
 # -- Compiling module sub
 # 
 # Top level modules:
 # 	sub
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/mul.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/mul.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/mul.v 
 # -- Compiling module mul
 # 
 # Top level modules:
 # 	mul
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/div.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/div.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/div.v 
 # -- Compiling module div
 # 
 # Top level modules:
 # 	div
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shr.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/shr.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shr.v 
 # -- Compiling module shr
 # 
 # Top level modules:
 # 	shr
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/neg.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/neg.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/neg.v 
 # -- Compiling module logical_neg
 # 
 # Top level modules:
 # 	logical_neg
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/not.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/not.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/not.v 
 # -- Compiling module logical_not
 # 
 # Top level modules:
 # 	logical_not
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:36 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shra.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/shra.v 
+# Start time: 20:28:36 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shra.v 
 # -- Compiling module shra
 # 
 # Top level modules:
 # 	shra
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/shl.v 
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/shl.v 
 # -- Compiling module shl
 # 
 # Top level modules:
 # 	shl
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/rol.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/rol.v 
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v 
 # -- Compiling module rol
 # 
 # Top level modules:
 # 	rol
-# End time: 17:22:05 on Feb 24,2025, Elapsed time: 0:00:00
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/ror.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:05 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/ror.v 
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v 
 # -- Compiling module ror
 # 
 # Top level modules:
 # 	ror
-# End time: 17:22:06 on Feb 24,2025, Elapsed time: 0:00:01
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:22:06 on Feb 24,2025
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/Phase1" C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v 
-# -- Compiling module not_tb
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/select_and_encode.v 
+# -- Compiling module select_and_encode
 # 
 # Top level modules:
-# 	not_tb
-# End time: 17:22:06 on Feb 24,2025, Elapsed time: 0:00:00
+# 	select_and_encode
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/conff.v 
+# -- Compiling module conff
+# -- Compiling module decoder2to4
+# 
+# Top level modules:
+# 	conff
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/inport_and_outport.v 
+# -- Compiling module outport
+# -- Compiling module inport
+# 
+# Top level modules:
+# 	outport
+# 	inport
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  not_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" not_tb 
-# Start time: 17:22:06 on Feb 24,2025
-# Loading work.not_tb
+# vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2 {C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:37 on Apr 03,2025
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2" C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v 
+# -- Compiling module st_tb
+# 
+# Top level modules:
+# 	st_tb
+# End time: 20:28:37 on Apr 03,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  st_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" st_tb 
+# Start time: 20:28:38 on Apr 03,2025
+# Loading work.st_tb
 # Loading work.Datapath
 # Loading work.reg_32_bit
 # Loading work.pc_reg
+# Loading work.select_and_encode
 # Loading work.mdr_mux_2_to_1
 # Loading work.alu
 # Loading work.and_32_bit
@@ -227,113 +273,69 @@
 # Loading work.logical_neg
 # Loading work.logical_not
 # Loading work.bus_mux_32_to_1
-# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Too few port connections. Expected 32, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'lo_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'hi_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_enable'.
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(107): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/ir File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(108): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/mar File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/add.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/Phase1/add.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v
+# Loading work.ram
+# Loading work.conff
+# Loading work.decoder2to4
+# Loading work.inport
+# Loading work.outport
+# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Too few port connections. Expected 35, found 32.
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'r8_enable'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'inport_init'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'con_out'.
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v(197): [PCDPC] - Port size (9) does not match connection size (32) for port 'addr'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/ram_memory File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 500 ns
-add wave -position insertpoint sim:/not_tb/DUT/y/*
-add wave -position insertpoint sim:/not_tb/DUT/ir/*
-add wave -position insertpoint sim:/not_tb/DUT/mar/*
-add wave -position insertpoint sim:/not_tb/DUT/mdr/*
-add wave -position insertpoint sim:/not_tb/DUT/pc/*
-add wave -position insertpoint sim:/not_tb/DUT/mdr_mux/*
-add wave -position insertpoint sim:/not_tb/DUT/alu/not_op/*
-add wave -position insertpoint sim:/not_tb/DUT/bus_mux/*
+# run 900 ns
+do st_tb.do
 restart 
-# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Too few port connections. Expected 32, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'lo_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'hi_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_enable'.
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(107): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/ir File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(108): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/mar File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/add.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/Phase1/add.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v
-run 600ns 
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-radix hex
+# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Too few port connections. Expected 35, found 32.
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'r8_enable'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'inport_init'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'con_out'.
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v(197): [PCDPC] - Port size (9) does not match connection size (32) for port 'addr'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/ram_memory File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v
+run 1ns
+radix he
 # hexadecimal
-add wave -position insertpoint sim:/not_tb/DUT/r0/*
-add wave -position insertpoint sim:/not_tb/DUT/r5/*
 restart 
-# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Too few port connections. Expected 32, found 20.
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT File: C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_out'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'lo_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'hi_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r2_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r3_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r4_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r6_enable'.
-# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/Phase1/not_tb.v(59): [TFMPC] - Missing connection for port 'r7_enable'.
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(107): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/ir File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v(108): [PCDPC] - Port size (32) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/mar File: C:/Users/cam/Downloads/374realfinal/Phase1/registers.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/add.v(5).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/Phase1/add.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v(4).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/Phase1/sub.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/Phase1/ror.v
-# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/Phase1/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /not_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/Phase1/rol.v
-run 600ns
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/cam/Downloads/374realfinal/Phase1/simulation/modelsim/not_tb.do
-# End time: 19:46:07 on Feb 24,2025, Elapsed time: 2:24:01
-# Errors: 0, Warnings: 57
+# ** Warning: (vsim-3017) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Too few port connections. Expected 35, found 32.
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'r8_enable'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'inport_init'.
+# ** Warning: (vsim-3722) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/st_tb.v(38): [TFMPC] - Missing connection for port 'con_out'.
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(28): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/add_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/add.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(29): [PCDPC] - Port size (1) does not match connection size (32) for port 'cin'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/sub_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/sub.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(35): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/ror_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ror.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/alu.v(36): [PCDPC] - Port size (5) does not match connection size (32) for port 'b'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/alu/rol_op File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/rol.v
+# ** Warning: (vsim-3015) C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/Datapath.v(197): [PCDPC] - Port size (9) does not match connection size (32) for port 'addr'. The port definition is at: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /st_tb/DUT/ram_memory File: C:/Users/cam/Downloads/374realfinal/risc_cpu/Phase2/ram.v
+run 20000ns
+# End time: 20:39:03 on Apr 03,2025, Elapsed time: 0:10:25
+# Errors: 0, Warnings: 27

@@ -5,30 +5,34 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/registers.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/Datapath.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/and_32_bit.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/alu.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/add.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/mdr_mux_2_to_1.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/logical_or.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/bus_mux_32_to_1.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/sub.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/mul.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/div.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shr.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/neg.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/not.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shra.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/shl.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/rol.v}
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/ror.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/registers.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/Datapath.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/and_32_bit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/alu.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/add.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/mdr_mux_2_to_1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/logical_or.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/bus_mux_32_to_1.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/sub.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/mul.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/div.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/shr.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/neg.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/not.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/shra.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/shl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/rol.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/ror.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/select_and_encode.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/conff.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/inport_and_outport.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/ram.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/374realfinal/Phase1 {C:/Users/cam/Downloads/374realfinal/Phase1/neg_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/cam/Downloads/Phase2\ folder/Phase2\ folder/Phase2 {C:/Users/cam/Downloads/Phase2 folder/Phase2 folder/Phase2/jal_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  neg_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  jal_tb
 
 add wave *
 view structure
 view signals
-run 600 ns
+run 700 ns
